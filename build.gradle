@@ -2,6 +2,7 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.0.7-SNAPSHOT'
 	id 'io.spring.dependency-management' version '1.1.0'
+	id 'war'	// jsp 필수 요소
 }
 
 group = 'com.cooper'
@@ -23,7 +24,7 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 //	implementation 'org.springframework.boot:spring-boot-starter-security'
-	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+//	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 //	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
 	compileOnly 'org.projectlombok:lombok'
@@ -33,7 +34,8 @@ dependencies {
 //	testImplementation 'org.springframework.security:spring-security-test'	// Using generated security password: 7767d53f-b9b4-4905-8dc7-ebe0ccdb066a
 	runtimeOnly 'mysql:mysql-connector-java:8.0.32'	// MYSQL 설정
 	implementation "org.apache.tomcat.embed:tomcat-embed-jasper"
-	implementation group: 'javax.servlet', name: 'jstl', version: '1.2'
+	implementation 'javax.servlet:jstl:1.2' // 추가
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat' // jsp 사용시 필수 요소
 }
 
 tasks.named('test') {

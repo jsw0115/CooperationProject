@@ -1,8 +1,0 @@
-#server:
-#  port: 9000
-#spring:
-#  thymeleaf:
-#    prefix: classpath:webapp/WEB-INF/jsp
-#    #    suffix: .html
-#    suffix: .jsp
-#    cache: false
