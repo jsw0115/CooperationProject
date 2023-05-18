@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>MAIN</title>
+    <title>INDEX</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" , initial-scale="1"> <!--뷰포트 설정(브라우저 자동크기조절 중단)-->
     <link rel="stylesheet" href="../static/css.bootstrap.min.css">
@@ -37,10 +37,13 @@
 </head>
 <body>
     <div id="header">
-        <h2>HEADER 영역</h2>
+        <h2>JSW 프로젝트</h2>
     </div>
     <div id="nav">
-        <h2>NAV 영역</h2>
+        <a href="/logout">로그아웃</a>
+        <a href="/main">메인 화면</a>
+        <a href="/dashboard">대시보드</a>
+        <a href="/mypage">마이페이지</a>
     </div>
     <div id="section">
         <h2>SECTION 영역</h2>
